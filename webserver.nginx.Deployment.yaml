@@ -5,12 +5,12 @@ metadata:
 spec:
   selector:
     matchLabels:
-      run: webserver
+      app: webserver
   replicas: 2
   template:
     metadata:
       labels:
-        run: webserver
+        app: webserver
     spec:
       containers:
       - name: webserver
