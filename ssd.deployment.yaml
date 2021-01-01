@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: webserver
+  name: database
 spec:
   selector:
     matchLabels:
-      app: webserver
+      app: db
   replicas: 3
   template:
     metadata:
       labels:
-        app: webserver
+        app: db
     spec:
       containers:
-      - name: webserver
-        image: nginx
+      - name: database
+        image: redis
         ports:
-        - containerPort: 80
+        - containerPort: 8080
       nodeSelector:
         diskType: ssd
 
