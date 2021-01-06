@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       run: db
-  replicas: 6
+  replicas: 4
   template:
     metadata:
       labels:
