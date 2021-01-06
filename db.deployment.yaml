@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: webserver
+  name: db
 spec:
   selector:
     matchLabels:
-      run: webserver
-  replicas: 4
+      run: db
+  replicas: 6
   template:
     metadata:
       labels:
-        run: webserver
+        run: db
     spec:
       containers:
-      - name: webserver
-        image: nginx
+      - name: db
+        image: redis
         ports:
         - containerPort: 80
       tolerations:
