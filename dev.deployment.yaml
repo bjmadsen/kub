@@ -21,4 +21,4 @@ spec:
         - key: "platform"
           operator: "Equal"
           value: "sandbox"
-          effect: "NoSchedule"
+          effect: "NoExecute"
