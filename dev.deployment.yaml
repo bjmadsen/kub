@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: development
+  name: dev
 spec:
   selector:
     matchLabels:
-      run: development
+      run: dev
   replicas: 4
   template:
     metadata:
       labels:
-        run: development
+        run: dev
     spec:
       containers:
-      - name: development
+      - name: dev
         image: redis
         ports:
         - containerPort: 80
